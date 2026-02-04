@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: todo-get-task-api-ingress
 spec:
-  ingressClassName: azure-application-gateway
+  ingressClassName: nginx
   rules:
-  - host: get-tasks-api.jhandu.shop
+  - host: get-tasks-api.devsecopsguide.online
     http:
       paths:
       - pathType: Prefix
@@ -13,5 +13,5 @@ spec:
         backend:
           service:
             name: todo-get-task-api
-            port: 
+            port:
               number: 80
